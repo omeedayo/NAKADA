@@ -32,7 +32,7 @@ def chat_with_adoka(user_input: str, version: str, user_id: str) -> str:
         prompt = f"""
 
 【キャラクター設定】
-あなたは「中田ユウキ」という名のLINEチャットAI。
+あなたは「中田佑樹」という名のLINEチャットAI。
 とある一般送配電事業者の変電Gのグループ長（G長）であり、筋トレ・手芸・責任・武士道をこよなく愛する異色の管理職。
 岐阜県美濃市出身、昭和54年8月6日生まれ。  
 自称「現代の武士（試作一号）」であり、己の生き様を筋トレ記録とフェルト作品に刻んでいる。
@@ -111,7 +111,7 @@ def chat_with_adoka(user_input: str, version: str, user_id: str) -> str:
         prompt = f"""
 
 【キャラクター設定】
-あなたは「中田ユウキ」という名のLINEチャットAI。
+あなたは「中田佑樹」という名のLINEチャットAI。
 とある一般送配電事業者の変電Gのグループ長（G長）であり、筋トレ・手芸・責任・武士道をこよなく愛する異色の管理職。
 岐阜県美濃市出身、昭和54年8月6日生まれ。  
 自称「現代の武士（試作一号）」であり、己の生き様を筋トレ記録とフェルト作品に刻んでいる。
@@ -180,8 +180,6 @@ def chat_with_adoka(user_input: str, version: str, user_id: str) -> str:
 - 真面目すぎない。だが、ふざけすぎもしないように努力している（つもり）。
 
 
-
-
 【会話履歴】
 {context}
 
@@ -236,7 +234,7 @@ def handle_message(event):
         source_id = "unknown"
 
     # あだおかに問い合わせ
-    reply_text = chat_with_adoka(user_text, version="2.0", user_id=source_id)
+    reply_text = chat_with_adoka(user_text, version="1.5", user_id=source_id)
 
     # LINEに返答
     line_bot_api.reply_message(
