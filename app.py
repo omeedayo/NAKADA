@@ -234,7 +234,7 @@ def handle_message(event):
         source_id = "unknown"
 
     # あだおかに問い合わせ
-    reply_text = chat_with_adoka(user_text, version="1.5", user_id=source_id)
+    reply_text = chat_with_adoka(user_text, version="2.0", user_id=source_id)
 
     # LINEに返答
     line_bot_api.reply_message(
